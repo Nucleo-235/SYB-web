@@ -110,8 +110,8 @@ class Chat < ActiveRecord::Base
 
   def send_push
     if user_1 && user_2
-      do_send_push(user_1, 'Combinou!', self.user_2.public_name + ' também gostou das suas peças ...', nil, 'roupa_new_match', { chat_id: self.id, type: 'match' })
-      do_send_push(user_2, 'Combinou!', self.user_1.public_name + ' também gostou das suas peças ...', nil, 'roupa_new_match', { chat_id: self.id, type: 'match' })
+      do_send_push(user_1, 'Combinou!', self.user_2.public_name + ' também gostou das suas peças ...', nil, 'shareyourbber_new_match', { chat_id: self.id, type: 'match' })
+      do_send_push(user_2, 'Combinou!', self.user_1.public_name + ' também gostou das suas peças ...', nil, 'shareyourbber_new_match', { chat_id: self.id, type: 'match' })
     end
   end
 

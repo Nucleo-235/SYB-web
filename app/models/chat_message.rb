@@ -27,7 +27,7 @@ class ChatMessage < ActiveRecord::Base
   def send_push
     recipients = chat.other_non_blocked_recipients(self.user)
     if recipients.length > 0
-      do_send_push(recipients, self.user.public_name + ' diz...', self.message, nil, 'roupa_new_message', { chat_id: self.chat_id, type: 'message' })
+      do_send_push(recipients, self.user.public_name + ' diz...', self.message, nil, 'shareyourbber_new_message', { chat_id: self.chat_id, type: 'message' })
     end
   end
 
